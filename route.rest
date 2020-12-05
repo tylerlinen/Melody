@@ -1,0 +1,26 @@
+GET http://localhost:3000/melodys
+
+###
+
+GET http://localhost:3000/melodys/5fc98d6ddc3a84c67bc84c3d
+
+###
+
+POST http://localhost:3000/melodys
+Content-Type: application/json
+
+{
+    "username": "thirdUser",
+    "password": "thirdPassword"
+  
+}
+
+###
+
+PATCH http://localhost:3000/subscribers/5fc98d7fdc3a84c67bc84c3e
+Content-Type: application/json
+
+{
+    "username": "new"
+   
+}
