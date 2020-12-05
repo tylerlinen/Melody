@@ -15,6 +15,7 @@ class App extends Component {
     })
   };
   
+  
 
   // createTopTrack = () => {
   //   let res = topTracksApi.post("/", {
@@ -26,11 +27,11 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.topTracks[0])
+    console.log(this.state.topTracks)
     return (
       <div className="App">
         <button onClick={this.getTracks}>click</button>
-        {/* <h2>{this.state.topTracks[0]}</h2> */}
+        {/* <h2>{[this.state.topTracks[0]]}</h2> */}
       </div>
     );
   }
