@@ -11,30 +11,26 @@ class App extends Component {
 
   getTracks = () => {
     API.getTopTracks(this.state.topTracks).then(res => {
-      this.setState({ topTracks: res.data.tracks.track });
+      this.setState({ topTracks: res.data.tracks.track});
     })
   };
   
 
-  // createTopTrack = async () => {
+  // createTopTrack = () => {
   //   let res = topTracksApi.post("/", {
-  //     name: "Blinding Lights"
+  //     topTracks
   //   });
   //   console.log(res);
-  //   this.getTopTracks();
+  //   this.getTracks();
   // };
 
 
   render() {
-    console.log(this.state.topTracks)
+    console.log(this.state.topTracks[0])
     return (
       <div className="App">
-        <button onClick={this.getTracks}>createTopTrack</button>
-        {/* {this.state.topTracks.map((topTrack) => (
-          <h2 key={topTrack.id}>
-            {topTrack.title}
-          </h2>
-        ))} */}
+        <button onClick={this.getTracks}>click</button>
+        {/* <h2>{this.state.topTracks[0]}</h2> */}
       </div>
     );
   }
