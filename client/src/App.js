@@ -1,41 +1,24 @@
+import React from "react";
 import "./App.css";
-import React, { Component } from "react";
-import API from "./utils/API";
+import Header from "./Header";
+import Home from "./Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-class App extends Component {
-  state = {
-    topTracks: [],
-  };
+function App() {
+  return (
+    //BEM
+    <Router>
+      <div className="app">
+        <Header />
 
-  componentDidMount(){
-    this.getTracks()
-  }
-
-  getTracks = () => {
-    API.getTopTracks(this.state.topTracks).then((res) => {
-      this.setState({ topTracks: res.data.tracks.track });
-    });
-  };
-
-  likeTracks = () => {
-    console.log( this.state.track.artist.name + "Clicked")
-  }
-
-
-  render() {
-   
-    console.log(this.state.topTracks);
-
-    return (
-      <div className="App">
-        <button onClick={this.getTracks}>click</button>
-        {this.state.topTracks.map((track) => {
-          {
-          return <h2>{track.artist.name} - {track.name} <button onClick = {this.likeTracks}>LIKE</button></h2>
-          }
-        })}
+        <Switch>          
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </div>
-    );
-  }
+    </Router>
+  );
 }
+
 export default App;
