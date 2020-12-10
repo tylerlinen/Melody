@@ -6,9 +6,13 @@ body{
     background-image: url(../imgs/concert.jpg);
 }
 
-#maincont{
-    z-index: 1;
+
+#likedcont{
+
 }
+/* #maincont{
+    
+} */
 
 #concert{
     position: fixed;
