@@ -4,7 +4,7 @@ import API from "./API";
 
 class GetAlbum extends Component {
   state = {
-    topAlbums: [],
+    topAlbums: [{}],
     likedAlbums: [],
   };
 
@@ -13,28 +13,25 @@ class GetAlbum extends Component {
   }
   getAlbum = () => {
     API.getTopAlbums(this.state.topAlbums).then((res) => {
-      this.setState({ topAlbums: res.data.albums.album});
+      this.setState({ topAlbums: res.data.albums.album });
       console.log(this.state.topAlbums);
     });
   };
 
   addToBasket = () => {
     console.log("added to album");
-    
   };
 
   render() {
     return (
       <div className="App">
         {this.state.topAlbums.map((album) => {
-          
-            return (
-              <h2 key = {album.name}>
-                {album.name} - {album.name}
-                <button onClick={this.addToBasket}>LIKE</button>
-              </h2>
-            );
-          
+          return (
+            <h2 key={album.name}>
+              {album.name} - {album.name}
+              <button onClick={this.addToBasket}>LIKE</button>
+            </h2>
+          );
         })}
       </div>
     );
