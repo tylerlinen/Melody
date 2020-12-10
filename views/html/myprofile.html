@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/stylesheet.css">
     <title>Melody</title>
 </head>
-<body style="background-color: rgb(255, 24, 255);">
+<body style="background-color: rgb(0, 0, 0);">
     <img src="../imgs/concert.jpg"  alt="concert" style="width:100%; position: absolute;" id="concert"> 
     <nav class="navbar navbar-inverse" style="background-color: rgb(24, 201, 255);">
         <div class="container-fluid">
@@ -26,29 +26,50 @@
                 <li><a href="search.html" style="background-color:  rgb(255, 24, 255); font-weight: bold;">Search</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Profile</a></li>
+                <li><a href="myprofile.html"><span class="glyphicon glyphicon-log-in"></span> Profile</a></li>
             </ul>
             </div>
         </div>
         </nav>
-    <div class="container" id="maincont">
-        <div class="container">
-            <div class="row" >
-                <div class="col-lg-4 content">
-                    <img class="img" src="" alt="Search">
-                        <h5 class="card-title">Search</h5>
+        <div class="container" id="maincont">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-lg-12 content"  style="border-radius: 25px; width: 100%; text-align: center;">
+                        <h2 class="card-title">My Likes</h2>
+                    </div>
                 </div>
-                <div class="col-lg-4 content">
-                    <img class="img" src="" alt="Top Hits">
-                        <h5 class="card-title">Top Hits</h5>
-                </div>
-                <div class="col-lg-4 content">
-                    <img class="img" src="" alt="Top Hits">
-                        <h5 class="card-title">Top Hits</h5>
+                <div class="col-lg-12 content"  style="border-radius: 25px; width: 100%; text-align: center;">
+                    <h4 class="topartist" id="topartist">Browse Your Likes!</h4>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="container" id="maincont" style="text-align: center; margin-bottom: 20px; margin-left: 15%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 content"  style="border-radius: 25px; width: 30%;"><a href="likes/tracks.html">
+                        <div class="item active">
+                            <img src="https://cdn0.iconfinder.com/data/icons/music-player-button-outline-24px/24/song_music_sound_track_list-512.png" alt="First" style="width: 300px; height: 300px; margin: auto; margin-top: 20px; border-radius: 50px;">
+                        </div>
+                            <h5 class="card-title">Tracks</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 content"  style="border-radius: 25px; width: 30%;"><a href="likes/albums.html">
+                        <div class="item active">
+                            <img src="https://image.flaticon.com/icons/png/512/26/26789.png" alt="First" style="width: 300px; height: 300px; margin: auto; margin-top: 20px; border-radius: 50px;">
+                        </div>
+                            <h5 class="card-title">Albums</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 content"  style="border-radius: 25px; width: 30%;"><a href="likes/artists.html">
+                        <div class="item active">
+                            <img src="https://static.thenounproject.com/png/105311-200.png" alt="First" style="width: 300px; height: 300px; margin: auto; margin-top: 20px; border-radius: 50px;">
+                        </div>
+                            <h5 class="card-title">Artists</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
