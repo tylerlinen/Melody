@@ -1,12 +1,13 @@
-import React from 'react'
-import GetTrack from "./GetTrack"
+import React from "react";
 
 function Home() {
-    return (
-        <div>
-        <GetTrack/>
-        </div>
-    )
+  return (
+    <div>
+      <>
+        Hello
+      </>
+    </div>
+  );
 }
 
 export default Home;

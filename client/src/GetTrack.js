@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { Component } from "react";
 import API from "./API";
-import {useStateValue} from "./StateProvider"
 
 class GetTrack extends Component {
   state = {
@@ -20,7 +19,7 @@ class GetTrack extends Component {
   };
 
   addToBasket = () => {
-    console.log("added");
+    console.log("added to tracks");
     
   };
 
@@ -28,14 +27,14 @@ class GetTrack extends Component {
     return (
       <div className="App">
         {this.state.topTracks.map((track) => {
-          {
+          
             return (
-              <h2>
+              <h2 key={track.name}>
                 {track.artist.name} - {track.name}
                 <button onClick={this.addToBasket}>LIKE</button>
               </h2>
             );
-          }
+          
         })}
       </div>
     );
