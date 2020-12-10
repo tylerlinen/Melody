@@ -1,1 +1,1 @@
-0274221ac89e4d659812e34bd6fe9c29
+GET https://api.spotify.com/v1/browse/new-releases/0274221ac89e4d659812e34bd6fe9c29

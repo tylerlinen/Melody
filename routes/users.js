@@ -33,7 +33,7 @@ router.post('/register', (req,res) => {
             name,
             password,
         });
-    } 
+    }
     else{
         User.findOne({ email: email})
         .then(user => {
